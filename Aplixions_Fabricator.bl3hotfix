@@ -1,0 +1,150 @@
+###
+### Aplixion's Currency Distributor
+###
+### Converts the Fabricator's primary firing mode to fire Diamond Keys, Vault Card Keys, and Money.
+###
+### Converts the Fabricator's secondary firing mode to fire Eridium.
+###
+### Also improves the Fabricator's recoil quite a bit.
+###
+### Global Definitions
+###
+
+# Weapon Name
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/WT_EridianFabricator.WT_EridianFabricator,InventoryName,0,,Aplixion's Currency Distributor
+
+# Item Card
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Firing/UIStat_EridianFabricator_02.UIStat_EridianFabricator_02,FormatText,0,,Shoots [skill]Keys[/skill] instead of bullets!
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Firing/UIStat_EridianFabricator_03.UIStat_EridianFabricator_03,FormatText,0,,Shoots [skill]Eridium[/skill] instead of bullets!
+
+# Remove Recoil
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[7].Object..Component.Object..PatternHeightScale.BaseValue,0,,0.0
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[7].Object..Component.Object..PatternWidthScale.BaseValue,0,,0.0
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[7].Object..Component.Object..RecoilSpeed,0,,0
+
+###
+### Eridium Value
+###
+
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Eridium/InvData_Eridium_Single.InvData_Eridium_Single,MonetaryValue,0,,(BaseValueConstant=1000000.0)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Eridium/InvData_Eridium_Ingot.InvData_Eridium_Ingot,MonetaryValue,0,,(BaseValueConstant=1000000.0)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Eridium/InvData_Eridium_Stack.InvData_Eridium_Stack,MonetaryValue,0,,(BaseValueConstant=10000000.0)
+
+###
+### Key and Money Value
+###
+
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_DiamondKey.InvData_DiamondKey,MonetaryValue,0,,(BaseValueConstant=100.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_VaultCard01Key_3.InvData_VaultCard01Key_3,MonetaryValue,0,,(BaseValueConstant=100.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard2/Data/Currency/InvData_VaultCard2Key_3.InvData_VaultCard2Key_3,MonetaryValue,0,,(BaseValueConstant=100.0)
+SparkPatchEntry,(1,1,0,),/Game/GameData/DLC/Entitlements/EntitlementPart_Currency_GoldenKey.EntitlementPart_Currency_GoldenKey,MonetaryValue,0,,(BaseValueConstant=100.0)
+
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_SingleStack.InvData_Money_SingleStack,MonetaryValue,0,,(BaseValueScale=1000)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_TripleStack.InvData_Money_TripleStack,MonetaryValue,0,,(BaseValueScale=1000)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_SlotMachine_Single.InvData_Money_SlotMachine_Single,MonetaryValue,0,,(BaseValueScale=1000)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_SlotMachine_Double.InvData_Money_SlotMachine_Double,MonetaryValue,0,,(BaseValueScale=1000)
+SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_SlotMachine_Triple.InvData_Money_SlotMachine_Triple,MonetaryValue,0,,(BaseValueScale=1000)
+
+# Pickup
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_DiamondKey.InventoryCategory_DiamondKey,PickupActionType,0,,OnUseOrTouch
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_VaultCard1Key.InventoryCategory_VaultCard1Key,PickupActionType,0,,OnUseOrTouch
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_VaultCard2Key.InventoryCategory_VaultCard2Key,PickupActionType,0,,OnUseOrTouch
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_GoldenKey.InventoryCategory_GoldenKey,PickupActionType,0,,OnUseOrTouch
+
+# Shared Pickups
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_DiamondKey.InventoryCategory_DiamondKey,SharedWithAllPlayers,0,,true
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_VaultCard1Key.InventoryCategory_VaultCard1Key,SharedWithAllPlayers,0,,true
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_VaultCard2Key.InventoryCategory_VaultCard2Key,SharedWithAllPlayers,0,,true
+SparkPatchEntry,(1,1,0,),/Game/Gear/_Shared/_Design/InventoryCategories/InventoryCategory_GoldenKey.InventoryCategory_GoldenKey,SharedWithAllPlayers,0,,true
+
+###
+### Regular Fire
+###
+
+# Mode Label
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/UIModeName_Fabricator_PrimaryFire.UIModeName_Fabricator_PrimaryFire,Text,0,,Aplixion's Key Shot
+
+# One projectile per shot
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Att_FabricatorProjectilesPerShot.Att_FabricatorProjectilesPerShot,ValueResolver.Object..Value.BaseValueConstant,0,,1
+
+# Shot cost
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Att_FabricatorShotCost.Att_FabricatorShotCost,ValueResolver.Object..Value.BaseValueConstant,0,,1
+
+# Full Auto
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[1].Object..WeaponUseComponent.Object..AutomaticBurstCount.BaseValue,0,,0
+
+# Fire Rate
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[1].Object..WeaponUseComponent.Object..FireRate.BaseValue,0,,6
+
+# Setting the item pool
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Fabricator/ItemPool_FabricatorGuns.ItemPool_FabricatorGuns,BalancedItems,0,,((InventoryBalanceData=/Game/PatchDLC/VaultCard/Data/Currency/InventoryBalance_VaultCard01Key_3,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/PatchDLC/VaultCard/Data/Currency/InventoryBalance_VaultCard01Key_3"',Weight=(BaseValueConstant=1)),(InventoryBalanceData=/Game/PatchDLC/VaultCard2/Data/Currency/InventoryBalance_VaultCard2Key_3,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/PatchDLC/VaultCard2/Data/Currency/InventoryBalance_VaultCard2Key_3"',Weight=(BaseValueConstant=1)),(InventoryBalanceData=/Game/PatchDLC/VaultCard/Data/Currency/InventoryBalance_DiamondKey.InventoryBalance_DiamondKey,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/PatchDLC/VaultCard/Data/Currency/InventoryBalance_DiamondKey.InventoryBalance_DiamondKey"',Weight=(BaseValueConstant=1)),(ItemPoolData=ItemPoolData'"/Game/GameData/Loot/ItemPools/Currency/ItemPool_Money_Rich.ItemPool_Money_Rich"',Weight=(BaseValueConstant=0.25)))
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Fabricator/ItemPool_FabricatorGuns.ItemPool_FabricatorGuns,Quantity,0,,(BaseValueConstant=4,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+
+
+###
+### Legendary Fire
+###
+
+# Mode Label
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/UIModeName_Fabricator_AltFire.UIModeName_Fabricator_AltFire,Text,0,,Aplixion's Eridium Blast
+
+# Full Auto
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[2].Object..WeaponUseComponent.Object..AutomaticBurstCount.BaseValue,0,,0
+
+# Fire Rate
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[2].Object..WeaponUseComponent.Object..FireRate.BaseValue,0,,1.5
+
+# Firing Cost
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[2].Object..WeaponUseComponent.Object..ShotAmmoCost.BaseValue,0,,0
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Eridian/_Shared/_Design/Parts/Part_Eridian_Fabricator.Part_Eridian_Fabricator,AspectList.AspectList[2].Object..WeaponUseComponent.Object..MinShotAmmoCost,0,,0
+
+# Setting the item pool
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Fabricator/ItemPool_FabricatorGuns_AltFire.ItemPool_FabricatorGuns_AltFire,BalancedItems,0,,((ItemPoolData=ItemPoolData'"/Game/GameData/Loot/ItemPools/Eridium/ItemPool_Eridium_Stack.ItemPool_Eridium_Stack"',Weight=(BaseValueConstant=1)))
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Fabricator/ItemPool_FabricatorGuns_AltFire.ItemPool_FabricatorGuns_AltFire,Quantity,0,,(BaseValueConstant=8,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+
+# Change the "Diamond Key" mesh
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/BP_DiamondKey_Single.Default__BP_DiamondKey_Single_C,ItemMeshComponent.Object..StaticMesh,0,,StaticMesh'"/Game/Enemies/Guardian/_Shared/Effects/Meshes/SM_FX_Chakra_02"'
+
+# Change the "VaultCard 1 Key" mesh
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/BP_VaultCard01Key1.Default__BP_VaultCard01Key1_C,ItemMeshComponent.Object..StaticMesh,0,,StaticMesh'"/Game/LevelArt/Environments/_Global/Bones/Human/Skulls/Model/Meshes/SM_Skull_01.SM_Skull_01"'
+
+# Change the "VaultCard 2 Key" mesh
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard2/Data/Currency/BP_VaultCard2Key.Default__BP_VaultCard2Key_C,ItemMeshComponent.Object..StaticMesh,0,,StaticMesh'"/Game/Vehicles/Outrunner/Model/SM_VFX_EnergyCell"'
+
+#
+# Item Rarity "Beam" & "Outline" adjustments
+#
+
+# Change the item "Rarity Beam" colors. RGB example:(r=0,g=0,b=0,a=1) would be black
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_00_Eridium.RarityData_00_Eridium,RarityColorFX,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_00_Money.RarityData_00_Money,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_04_VeryRare.RarityData_04_VeryRare,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_01_Common.RarityData_01_Common,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_02_UnCommon.RarityData_02_UnCommon,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_03_Rare.RarityData_03_Rare,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+
+# Change the item "Rarity Outline" colors
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_00_Eridium.RarityData_00_Eridium,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_00_Money.RarityData_00_Money,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_04_VeryRare.RarityData_04_VeryRare,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_01_Common.RarityData_01_Common,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_02_UnCommon.RarityData_02_UnCommon,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_03_Rare.RarityData_03_Rare,RarityColorOutline,0,,(r=1,g=0,b=0,a=1)
+
+#
+# Change the Legendary "Rarity Beam" and "Rarity Outline" color
+#
+
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_05_Legendary.RarityData_05_Legendary,RarityLootBeamOverride,0,,/Game/Pickups/_Shared/Effects/Systems/Foil/PS_ItemLocatorStick_Foil_VeryRare.PS_ItemLocatorStick_Foil_VeryRare
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_05_Legendary.RarityData_05_Legendary,RarityColorFX,0,,(r=0,g=0,b=0,a=1)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/RarityData/RarityData_05_Legendary.RarityData_05_Legendary,RarityColorOutline,0,,(r=0,g=0,b=0,a=1)
+
+#
+# Loot Beam Size
+#
+
+SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/Effects/Systems/Foil/PS_ItemLocatorStick_Foil_VeryRare.PS_ItemLocatorStick_Foil_VeryRare:ParticleModuleSize_0.DistributionVectorConstant_1,Constant.Y,0,,500
+SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/Effects/Systems/Foil/PS_ItemLocatorStick_Foil_VeryRare.PS_ItemLocatorStick_Foil_VeryRare:ParticleModuleSize_0.DistributionVectorConstant_1,Constant.X,0,,13.5
+
+SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/Effects/Systems/Foil/PS_ItemLocatorStick_Foil_Eridium.PS_ItemLocatorStick_Foil_Eridium:ParticleModuleSize_0.DistributionVectorConstant_1,Constant.Y,0,,500
+SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/Effects/Systems/Foil/PS_ItemLocatorStick_Foil_Eridium.PS_ItemLocatorStick_Foil_Eridium:ParticleModuleSize_0.DistributionVectorConstant_1,Constant.X,0,,13.5
