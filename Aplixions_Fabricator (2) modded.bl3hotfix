@@ -43,11 +43,11 @@ SparkPatchEntry,(1,1,0,),/Game/Pickups/Eridium/InvData_Eridium_Stack.InvData_Eri
 ### Key and Money Value
 ###
 
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_DiamondKey.InvData_DiamondKey,MonetaryValue,0,,(BaseValueConstant=10000000.0)
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_VaultCard01Key_3.InvData_VaultCard01Key_3,MonetaryValue,0,,(BaseValueConstant=10000000.0)
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard2/Data/Currency/InvData_VaultCard2Key_3.InvData_VaultCard2Key_3,MonetaryValue,0,,(BaseValueConstant=10000000.0)
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard3/Data/Currency/InventoryBalance_VaultCard3Key_3.InventoryBalance_VaultCard3Key_3,MonetaryValue,0,,(BaseValueConstant=10000000.0)
-SparkPatchEntry,(1,1,0,),/Game/GameData/DLC/Entitlements/EntitlementPart_Currency_GoldenKey.EntitlementPart_Currency_GoldenKey,MonetaryValue,0,,(BaseValueConstant=10000000.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_DiamondKey.InvData_DiamondKey,MonetaryValue,0,,(BaseValueConstant=100000000.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard/Data/Currency/InvData_VaultCard01Key_3.InvData_VaultCard01Key_3,MonetaryValue,0,,(BaseValueConstant=100000000.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard2/Data/Currency/InvData_VaultCard2Key_3.InvData_VaultCard2Key_3,MonetaryValue,0,,(BaseValueConstant=100000000.0)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/VaultCard3/Data/Currency/InventoryBalance_VaultCard3Key_3.InventoryBalance_VaultCard3Key_3,MonetaryValue,0,,(BaseValueConstant=100000000.0)
+SparkPatchEntry,(1,1,0,),/Game/GameData/DLC/Entitlements/EntitlementPart_Currency_GoldenKey.EntitlementPart_Currency_GoldenKey,MonetaryValue,0,,(BaseValueConstant=100000000.0)
 
 SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_SingleStack.InvData_Money_SingleStack,MonetaryValue,0,,(BaseValueScale=1000)
 SparkPatchEntry,(1,1,0,),/Game/Pickups/Money/InvData_Money_TripleStack.InvData_Money_TripleStack,MonetaryValue,0,,(BaseValueScale=1000)
